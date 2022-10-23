@@ -1,0 +1,48 @@
+Insertion in Red Black Tree
+
+---------------------------------------------------------------
+RB-Insert (T,Z)
+===========================
+Y<--Nill[T]
+X<--root[T]
+
+while X!=nill[T]
+do Y<--X
+if key[Z] < key[X]
+then X <-- left[X]
+else X <-- right[X]
+
+P[Z]<--Y
+if Y= nill[T]
+then root[T]<--Z
+else if key[Z]<key[Y]
+then left[Y]<--Z
+else right [Y]<--Z
+left[Z]<--nill[T]
+right[Z]<--nill[T]
+color[Z]<--RED
+RB-Insert-Fixup(T,Z)
+-----------------------------------------------------------------------
+RB-Insert-Fixup(T,Z)
+=============================
+while z.p color == Red
+if z.p == z.p.p.left
+y=z.p.p.right
+if y.color = Red
+
+z.p color=Black
+y.color<--Black
+z.p.p.color<--Red
+z=z.p.p
+
+else if z==z.p.right
+
+z=z.p
+Left Rotate(T,Z)
+
+z.pcolor=Black
+z.p.p color =Red
+Right Rotate(T,z.p.p)
+
+else(Repeat from step3 with exchanging left to right and right to left)
+T.root.color=Black
