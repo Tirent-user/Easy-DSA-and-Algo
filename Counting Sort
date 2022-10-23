@@ -1,0 +1,14 @@
+Counting Sort Algorithm
+
+CountingSort(A,B,K)
+=============================
+
+for i<-- 0 to k
+do C[i]<--0
+for j<--1 to length[A]
+do C[A[J]]<--C[A[J]]+1
+for i<--1 to k
+do C[i]<--C[i]+C[i-1]
+for j<--length[A] down to 1
+do B[C[A[J]]]<--A[J]
+C[A[J]]<--C[A[J]]-1
