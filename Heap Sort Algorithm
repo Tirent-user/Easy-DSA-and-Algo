@@ -1,0 +1,21 @@
+Let's take Max Heap
+Algo....
+===================
+Build max-Heap[H]
+for i<--length[H] down to 2
+do exchange H[1]<-->H[i]
+Heapsize[H]<--Heapsize[H]-1
+Max-Heapify[H,1]
+
+Heapify[H,1] algo
+==========================
+set l<--Lchild[i]
+set r<--Rchild[i]
+if(l<heapsize[H]&H[l]>=H[i])then
+   set max<--l
+   else set max<--i
+if(r<=Heapsize[H]&H[r]>H[max])then
+   set max<--r
+if(max!=i)then
+   set H[i]<-->H[max]
+Call Heapify[H,max]
