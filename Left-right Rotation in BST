@@ -1,0 +1,14 @@
+=============================
+Left Rotation(T,X)
+=============================
+Y<--right[X]
+right[X]<--left[Y]
+P[left[Y]]<--X
+P[Y]<--P[X]
+if P[X]= nill[T]
+then root[T]<--Y
+else if X= left[P[X]]
+then left[P[X]]<--Y
+else right [P[X]]<--Y
+left[Y]<--X
+P[X]<--Y
